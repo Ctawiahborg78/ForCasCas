@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <title>Happy Valentine's Cassi</title>
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Will you be my</h1>
+                <h1 class = "header_text">valentine, Cassi?</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://img1.picmix.com/output/stamp/normal/9/2/6/7/1147629_1b7c9.gif" alt="Decorative GIF">
+                <img src="https://64.media.tumblr.com/9209ca35bbb0bb1922b58e79b2cbaa0f/tumblr_njsqupFPHP1u8rt2vo1_400.gifv" alt="Cute animated illustration">
+                <img src="https://img1.picmix.com/output/stamp/normal/9/2/6/7/1147629_1b7c9.gif" alt="Decorative GIF">
+            </div>
+            
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+                <script>
+                    function nextPage() {
+                        window.location.href = "yes.html";
+                    }
+                    
+                    function moveButton() {
+                        var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth) - 85;
+                        var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight) - 48;
+                        document.getElementById('noButton').style.left = `${x}px`;
+                        document.getElementById('noButton').style.top = `${y}px`;
+                    }
+                    
+                    window.onload = function() {
+    alert("YOU BETTER MAKE THE RIGHT CHOICE.");
+};
+                </script> 
+            </div>
+        </div>
+       
+    </body> 
+</html>
+
